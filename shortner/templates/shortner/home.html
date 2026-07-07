@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+</head>
+<body>
+<h2>Short URL Generator</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="url" name="url" placeholder="Enter Long URL" required>
+    <button type="submit">Shorten</button>
+</form>
+{% if short_url %}
+    <h3>Your Short URL:</h3>
+    <a href="{{ short_url }}">{{ short_url }}</a>
+{% endif %}
+</body>
+</html>
