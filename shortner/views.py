@@ -3,7 +3,7 @@ from .models import ShortURL
 import random
 import string
 
-domain_name = "http://127.0.0.1:8000/"
+domain_name = "https://furqanhameed2190.pythonanywhere.com/"
 
 def generate_short_code():
     characters = string.ascii_letters + string.digits
